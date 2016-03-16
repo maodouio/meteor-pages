@@ -32,9 +32,10 @@ Package.onUse(function(api){
     api.addFiles([
         "client/templates.html",
         "client/controllers.coffee",
-        "client/main.css",
-        "public/loader.gif"
+        "client/main.css"
     ], "client");
+
+    api.addAssets('public/loader.gif', 'client');
 });
 
 Package.onTest(function(api){
