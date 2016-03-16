@@ -519,9 +519,9 @@
     skip = (page - 1) * get "perPage"
     skip = 0 if skip < 0
     filters = get "filters"
-    options = 
-      sort: get "sort"
+    options =
       fields: get "fields"
+      sort: get "sort"
       skip: skip
       limit: get "perPage"
     
@@ -576,8 +576,8 @@
             
             sub.added(@id, id, doc)
             (@Collection.find get("filters"),
-              sort: get "sort"
               fields: get "fields"
+              sort: get "sort"
               skip: skip
               limit: get "perPage"
             ).forEach (o, i) =>
@@ -593,8 +593,8 @@
         at = -1
         ref = false
         (@Collection.find get("filters"),
-          sort: get "sort"
           fields: get "fields"
+          sort: get "sort"
           skip: skip
           limit: get "perPage"
         ).forEach (o, i) =>
